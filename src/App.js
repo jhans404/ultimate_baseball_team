@@ -70,7 +70,8 @@ class App extends React.Component {
           />
 
           <Position 
-            position="Second Base" 
+            positionDisplay="Second Base"
+            position="second" 
             img1={cano} 
             name1="Robinson Cano"
             img2={dj}
