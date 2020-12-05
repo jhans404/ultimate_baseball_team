@@ -24,6 +24,15 @@
   margin-bottom: 40px;
 }
 
+.Position {
+  background-color: #002D72;
+  color: #FF5910;
+  width: 50%;
+  padding: 15px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
 .choice-group {
   text-align: left;
 }

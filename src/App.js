@@ -1,9 +1,15 @@
 import React from 'react';
 import './App.css';
+import './Bootstrap.css';
 import Navbar from './Components/Navbar';
 import Dashboard from './Components/Dashboard';
 import Player from './Components/Player';
 import Card from './Components/Card';
+import Position from './Components/Position';
+import alonso from './Components/images/pete-alonso.jpg';
+import voit from './Components/images/voit.jpg';
+import cano from './Components/images/cano.jpg';
+import dj from './Components/images/dj.jpg';
 
 class App extends React.Component {
   constructor(props) {
@@ -43,6 +49,34 @@ class App extends React.Component {
           catcher={this.state.catcher}
           pitcher={this.state.pitcher}
         />
+
+        <div className="card-container">
+          <Position 
+            position="First Base" 
+            img1={alonso} 
+            name1="Pete Alonso"
+            average1=".259"
+            homers1="52"
+            rbis1="102"
+            img2={voit}
+            name2="Luke Voit"
+            average2=".240"
+            homers2="40"
+            rbis2="90"
+          />
+
+          <Position 
+            position="Second Base" 
+            img1={cano} 
+            name1="Robinson Cano"
+            img2={dj}
+            name2="DJ LeMahieu"
+          />
+    
+        </div>
+        
+        <Player img={alonso} name="Pete Alonso"/>
+
         <div className="card-container">
           <Card display="First Base" position="first" name1="Pete Alonso" name2="Luke Voit" makeChoice={this.makeChoice} />
           <Card display="Second Base" position="second" name1="Robinson Cano" name2="DJ LeMahieu" makeChoice={this.makeChoice} />
@@ -54,6 +88,7 @@ class App extends React.Component {
           <Card display="Catcher" position="catcher" name1="Wilson Ramos" name2="Gary Sanchez" makeChoice={this.makeChoice} />
           <Card display="Pitcher" position="pitcher" name1="Jacob deGrom" name2="Gerrit Cole" makeChoice={this.makeChoice} />
         </div>
+
       </div>
     );
   }
