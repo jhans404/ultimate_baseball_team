@@ -17,7 +17,7 @@ class App extends React.Component {
     this.state = {
       "first": "Please select a player",
       "second": "Please select a player",
-      "third": "Please select an player",
+      "third": "Please select a player",
       "short": "Please select a player",
       "left": "Please select a player",
       "center": "Please select a player",
@@ -52,17 +52,21 @@ class App extends React.Component {
 
         <div className="card-container">
           <Position 
-            position="First Base" 
+            positionDisplay="First Base" 
+            position="first"
             img1={alonso} 
             name1="Pete Alonso"
-            average1=".259"
-            homers1="52"
-            rbis1="102"
+            average1=".260"
+            homers1="53"
+            rbis1="120"
             img2={voit}
             name2="Luke Voit"
-            average2=".240"
-            homers2="40"
-            rbis2="90"
+            average2=".263"
+            homers2="21"
+            rbis2="62"
+            link1="https://www.baseball-reference.com/players/a/alonspe01.shtml"
+            link2="https://www.baseball-reference.com/players/v/voitlu01.shtml"
+            makeChoice={this.makeChoice}
           />
 
           <Position 
@@ -71,6 +75,7 @@ class App extends React.Component {
             name1="Robinson Cano"
             img2={dj}
             name2="DJ LeMahieu"
+            makeChoice={this.makeChoice}
           />
     
         </div>
